@@ -1,0 +1,15 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          okta:
+            client-id: 0oa5nqm9er3n9sgLM5d7
+            client-secret: Bn6NU1GXb3XAu_xWptEFDnJCyO0xtZtem2-Dmox8
+            scope: openid
+            redirect-uri: http://localhost:8080/actuator
+        provider:
+          okta:
+            token-uri: https://dev-48948520.okta.com/oauth2/default/v1/token
+            authorization-uri: https://dev-48948520.okta.com/oauth2/default/v1/authorize
+
