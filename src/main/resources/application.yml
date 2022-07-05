@@ -7,9 +7,10 @@ spring:
             client-id: 0oa5nqm9er3n9sgLM5d7
             client-secret: Bn6NU1GXb3XAu_xWptEFDnJCyO0xtZtem2-Dmox8
             scope: openid
-            redirect-uri: http://localhost:8080/actuator
+            redirect-uri: http://localhost:8080/login/oauth2/code/okta
+            authorization-grant-type: authorization_code
         provider:
           okta:
             token-uri: https://dev-48948520.okta.com/oauth2/default/v1/token
             authorization-uri: https://dev-48948520.okta.com/oauth2/default/v1/authorize
-
+            jwk-set-uri: https://dev-48948520.okta.com/oauth2/default/v1/keys
