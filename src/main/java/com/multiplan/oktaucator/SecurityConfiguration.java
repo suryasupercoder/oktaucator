@@ -10,8 +10,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.antMatcher("/**").authorizeRequests()
-            .anyRequest().authenticated()
+
+                .anyRequest().authenticated()
             .and()
-            .oauth2Login();
+                .oauth2Client().and()
+           .oauth2Login();
     }
 }
